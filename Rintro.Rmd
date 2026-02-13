@@ -45,8 +45,8 @@ Data in R can also be organized into lists, which contain an ordered group of el
 Data frames can be created using the data.frame function, but it's more common to generate data in another program and read it into R using the *read.table* function. This function takes as it's main argument the name of a text file containing lines of data separated by spaces (whitespace to be particular), and creates a data frame with each column of data as an element in the data frame. There are also several optional arguments, including whether the first line of the file contains column names, what character(s) separate data in a line, and how many lines to read from the file. There's also an argument to supply text, if you didn't want to create a separate text file with the data. A few of these options are shown in the examples below.
 
 ```{r}
-mileagedata <- read.table("gasoline.data",header = TRUE)
-duckframe <- read.table(header=TRUE, text="
+mileagedata <- read.table("gasoline.data",header = TRUE,stringsAsFactors = TRUE)
+duckframe <- read.table(header=TRUE,stringsAsFactors = TRUE, text="
 blind         species        paddling
 HollowGrove   Mallard        21
 MarshaMarsha  Eider          19
@@ -112,7 +112,7 @@ parameters to change different aspects of the plot. A full list of the
 parameters can be found in the help for the plot function.
 
 ```{r}
-plot(ppg~station, data=mileagedata, ylabel="Price ($/gallon)")
+plot(ppg~station, data=mileagedata, ylab = "Price ($/gallon)")
 ```
 
 More complex plots can be created by combining the plot function with other
@@ -260,8 +260,8 @@ When a determining variable and a response variable are both numeric, it is ofte
 ```{r}
 mpgmodel <- lm(mpg~ppg, data=mileagedata)
 summary(mpgmodel)
-plot(mpg~ppg, data=mileagedata)
-abline(mpgmodel)
+# plot(mpg~ppg, data=mileagedata)
+# abline(mpgmodel)
 ```
 
 In addition to the lm function, the glm function can determine a linear model for variables that aren't directly linearly related, but which can be transformed to a linear relationship using a common function. The nls function can calculate a nonlinear model for the data, provided the form of the model and appropriate starting guesses for the parameters in the model.
