@@ -1,11 +1,11 @@
 ---
 title: "Reproducible Research and Computing"
 author: "Nathan Malmberg"
-date: "Spring 2019"
+date: "Spring 2022"
 output: 
   slidy_presentation:
     duration: 20
-bibliography: reproducibility20170510.bib
+bibliography: reproducibility20200229.bib
 csl: nature.csl
 ---
 
@@ -31,6 +31,14 @@ knitr::opts_chunk$set(echo = FALSE)
     - Neurophysiology[@gilmore_progress_2017;@heroux_questionable_2017;@zeiss_reproducibility_2017]
     - Other areas
 - Scientists still believe the research.[@baker_1500_2016]
+
+## Lack of Reproducibility is a Problem
+-  American Innovation and Competitiveness Act(2016)[@gardner_text_2017]
+- NASEM: Reproducibility and Replicability in Science[@national_academies_of_sciences_reproducibility_2019]
+  - Reproducibility should be expected
+  - Computational reproducibility = reproducibility
+  - Replicability is nuanced
+  - Replicability may not always be possible
 
 ## Value of Reproducible Research
 - How did that other lab analyze their data?
