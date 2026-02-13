@@ -1,7 +1,7 @@
 ---
 title: "Reproducible Research and Computing"
 author: "Nathan Malmberg"
-date: "Spring 2022"
+date: "Spring 2026"
 output: 
   slidy_presentation:
     duration: 20
