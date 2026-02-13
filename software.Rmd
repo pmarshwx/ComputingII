@@ -46,6 +46,19 @@ plot(cars)
 
 If a scatterplot appears above these words, it would indicate a successful installation of R and RStudio.
 
+# Git
+
+Data scientists are increasingly using version control to manage data and programs, as well as to facilitate collaboration and dissemination of work. [Git](http://git-scm.com) is a tool that has become increasingly popular among data scientists. The program can be installed and run without the administration of a server (unlike most version control tools), but it also facilitates interactions with [GitHub](http://github.com), a company that hosts Git repositories online, usually at no cost. Git also interacts readily with RStudio, so there will be a little less complexity in managing your programs in Git.
+
+Mac computers already have Git installed, but you may want to install a more recent version from the [website](http://git-scm.com). Windows users will need to download and install the program. Once Git is installed, make sure to establish your identity before performing any version control tasks:
+
+```{bash}
+git config --global user.name "Your Name"
+git config --global user.email your.email@example.com
+```
+
+You may need to set the engine for this code block to a different command line interface, or copy and paste the commands to another prompt in order to execute these commands.
+
 # Python
 
 While RStudio is specifically geared toward programming in R, we will start with Python, a more general purpose language. Python is used in a wide variety of settings to learn how to program (Python programs can be very simple) as well as perform advanced scientific computing tasks (NASA is listed among the organizations that relies heavily on Python). A version of Python is installed by default on multiple operating systems (Windows being the notable exception). We will plan to use a more recent version of Python, in part because the language has been improved, and in part because it may be easier to install the additional components we will use in this course.
@@ -55,7 +68,7 @@ While RStudio is specifically geared toward programming in R, we will start with
 Windows and MacOS users can find downloads for Python 3 at the [main Python webpage](http://www.python.org). Download and install the Python 3 appropriate to your operating system. If you're using the latest version of Raspbian for your Raspberry Pi, Python 3 should already be installed on your system.
 
 Because Python, like most programming languages, is command driven rather than menu driven, you probably won't have an icon to click to run Python. You should be able to start the interpreter at a command prompt to try typing Python commands for the program to execute. You can also run the code below, but be sure to adjust the engine path to the place you've installed Python.
-```{python, engine.path="/opt/local/bin/python3.5"}
+```{python}
 # A blast from the Sesame Street past!
 for ladybug in range(12):
     print(ladybug + 1)
@@ -67,7 +80,7 @@ print("ladybugs came to the ladybug picnic!")
 We will learn some of the foundational aspects of programming using the Turtle environment, which is a fun way of seeing the results of our programs in action. The Turtle language is built into Python, but the environment needed to show the turtle will need to be installed on Windows computers, and possibly on MacOS computers.
 
 To test if you need to install Tcl/Tk on your computer, try running the code below, adjusting the engine path as needed.
-```{python, engine.path="/opt/local/bin/python3.5"}
+```{python}
 import time
 from turtle import *
 home()
